@@ -1,0 +1,24 @@
+<html>
+<head>
+  <title>Sinatra Hangman Game</title>
+  <link rel="stylesheet" href="style.css" >
+  <link href="https://fonts.googleapis.com/css?family=Gloria+Hallelujah" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Cinzel" rel="stylesheet">
+</head>
+<body>
+  <p class="info">anistor86's project - theodinproject.com</p>
+  <h1>Hangman game</h1>
+  <p class="guessing"><%= guessing %></p>
+  <p>Guessings: <%= lives %></p>
+  <p>Chosen letters: <%= chosen_letters %></p>
+  <div>
+    <form>
+      <label for="letter">Choose a letter:</label>
+      <input type='text' name='letter' maxlength="1" oninput="this.value=this.value.replace(/[^a-zA-Z]/g,'');" <%= input_status %>/>
+      <input type='submit' value='Go!' />
+    </form>
+  </div>
+  <p><%= message %></p>
+  <p><a href="/?restart=true">Start a new game</a></p>
+</body>
+</html>
