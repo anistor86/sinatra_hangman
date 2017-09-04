@@ -1,12 +1,11 @@
 require 'sinatra'
-# require 'sinatra/reloader' if development?
+require 'sinatra/reloader' if development?
 require_relative 'lib/hangman.rb'
 
 
-configure do
+
   enable :sessions
-  set :session_secret, 'secret'
-end
+
 
 
 
